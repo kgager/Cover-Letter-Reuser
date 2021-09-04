@@ -6,16 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
         <title>Document</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js" type="module"></script>
+        <script type="text/javascript" src="index.js"></script>
     </head>
     <body class="root">
-        <script>
-            function fillInCompany() {
-                const coverLetter = document.getElementById("coverLetter").value;
-                const companyName = document.getElementById("companyName").value;
-                const updatedCoverLetter = coverLetter.replaceAll('🤑', companyName);
-                document.getElementById("updatedCoverLetter").value = updatedCoverLetter
-            }
-        </script>
 
         <div class="content">
             <h1 class="title">Reuse Cover Letters</h1>
@@ -30,6 +24,7 @@
                 <textarea placeholder="Your NEW cover letter!" id="updatedCoverLetter" type="text" class="textArea"></textarea>
             </div>
             <button class="button" onclick="fillInCompany()" type="submit">Work Magic!</button>
+            <button class="button" onclick="writePDF(document.getElementById(`updatedCoverLetter`).value)" type="submit">WRITE PDF</button>
         </div>
     </body>
 </html>
