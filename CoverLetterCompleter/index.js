@@ -2,13 +2,14 @@
 function fillInCompany() {
     const coverLetter = document.getElementById("coverLetter").value;
     const companyName = document.getElementById("companyName").value;
-    const updatedCoverLetter = coverLetter.replaceAll('🤑', companyName);
+    const jobTitle = document.getElementById("jobTitle").value;
+    const updatedCoverLetter = coverLetter.replaceAll('🏢', companyName).replaceAll('💼', jobTitle);
     document.getElementById("updatedCoverLetter").value = updatedCoverLetter
 }
 
 async function writePDF(letter) {
     if (letter === null || letter === "") {
-        alert("No cover letter detected!")
+        alert("No cover letter pasted! Check all text fields.")
     } else {
         const { PDFDocument, StandardFonts, rgb } = PDFLib
         const pdfDoc = await PDFDocument.create()

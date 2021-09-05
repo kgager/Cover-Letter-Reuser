@@ -12,22 +12,27 @@
     </head>
     <body class="root">
         <div class="content">
-            <h1 class="title">Reuse Cover Letters 🤑</h1>
+            <h1 class="title">Emoji Cover Letter Reuser 🤑</h1>
             <div class="instructions">
-                <p class="subHeading">Paste your OLD Cover Letter on the left. Replace any company name mention with 🤑 .</p>
-                <p class="subHeading">Enter the company you're applying to. Your template can now be reused.</p>
+                <p class="subHeading">Paste your OLD cover letter. Replace each of the following:</p>
+                <p class="subHeading" style="font-weight: bold;">Company Name = 🏢</p>
+                <p class="subHeading" style="font-weight: bold;">Job Title = 💼</p>
             </div>
-            <input class="textInput" type="text" id="companyName" placeholder="Your dream company"/>
+            <input class="textInput" type="text" id="companyName" placeholder="Company Name"/>
+            <input class="textInput" type="text" id="jobTitle" placeholder="Job Title"/>
             <div style="display: flex; flex-direction: row;">
-                <textarea placeholder="Paste OLD cover letter" id="coverLetter" type="text" class="textArea"></textarea>
+                <textarea placeholder="Paste OLD cover letter..." id="coverLetter" type="text" class="textArea"></textarea>
                 <div style="width: 20px"></div>
                 <textarea placeholder="Your NEW cover letter!" id="updatedCoverLetter" type="text" class="textArea"></textarea>
             </div>
             <div class="buttonContainer">
-                <button class="button" onclick="fillInCompany()" type="submit">Work Magic!</button>
-                <div class="buttonSubContainer">
-                    <button class="controlButton" onclick="writePDF(document.getElementById(`updatedCoverLetter`).value)" type="submit">Download</button>
-                </div>
+                <button class="buttonBlue" onclick="fillInCompany()" type="submit">
+                    <svg stroke="white" fill="white" stroke-width="0" viewBox="0 0 16 16" class="w-4 h-4 mr-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M11.251.068a.5.5 0 01.227.58L9.677 6.5H13a.5.5 0 01.364.843l-8 8.5a.5.5 0 01-.842-.49L6.323 9.5H3a.5.5 0 01-.364-.843l8-8.5a.5.5 0 01.615-.09z"></path>
+                    </svg>
+                    Convert
+                </button>
+                <button class="buttonGray" onclick="writePDF(document.getElementById(`updatedCoverLetter`).value)" type="submit">Download</button>
             </div>
         </div>
     </body>

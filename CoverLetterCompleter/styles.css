@@ -9,13 +9,13 @@
     flex-direction: column; 
     padding: 20px;
     min-width: 1100px;
+    flex: 2;
 }
 .title {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 36px;
     font-weight: 800;
     color: #3B82f6;
-    /* color: black; */
 }
 .instructions{ 
     margin-bottom: 25px;
@@ -55,40 +55,66 @@
 }
 .buttonContainer {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: flex-end;
 }
 .buttonSubContainer {
     display: flex;
 }
-.controlButton {
+
+.buttonBlue {
     margin-top: 20px; 
-    align-self: center;
-    border-radius: .125rem;
+    border-radius: .375rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 20px;
-    padding-left: 20px;
-    background-color: #E5E7EB;
-    color: #4B5563;
+    margin-left: 10px;
+    height: 45px;
+    width: 130px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: large;
     font-weight: 500;
-    margin-left: 20px;
+    background-color: #2563EB; 
+    color: white;
+    transition-duration: 150ms;
 }
-.button {
+.buttonBlue:hover {
+    background-color: #4b84ff;
+}
+
+.buttonGray {
     margin-top: 20px; 
     align-self: center;
+    justify-content: center;
     border-radius: .375rem;
     border: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 20px;
-    padding-left: 20px;
-    background-color: #2563EB;
-    color: white;
+    margin-left: 10px;
+    height: 45px;
+    width: 130px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: large;
     font-weight: 500;
+    background-color: #E5E7EB; 
+    color: #4B5563;
+    transition-duration: 150ms;
+}
+.buttonGray:hover {
+    background-color: #cacccf;
+}
+.footer {
+    display: flex;
+    justify-content: center;
+    min-width: 1100px;
+    padding: 20px;
+    height: 100%;
+}
+.w-4 {
+    width: 1rem;
+}
+.h-4 {
+    height: 1rem;
+}
+.mr-2 {
+    margin-right: .25rem;
 }
