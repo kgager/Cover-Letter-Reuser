@@ -1,9 +1,10 @@
-
 function fillInCompany() {
     const coverLetter = document.getElementById("coverLetter").value;
     const companyName = document.getElementById("companyName").value;
     const jobTitle = document.getElementById("jobTitle").value;
-    const updatedCoverLetter = coverLetter.replaceAll('🏢', companyName).replaceAll('💼', jobTitle);
+    const updatedCoverLetter = coverLetter
+        .replaceAll('🏢', companyName)
+        .replaceAll('💼', jobTitle);
     document.getElementById("updatedCoverLetter").value = updatedCoverLetter
 }
 
