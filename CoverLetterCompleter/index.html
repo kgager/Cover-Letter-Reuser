@@ -6,11 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
         <title>Document</title>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js" type="module"></script>
         <script type="text/javascript" src="index.js"></script>
+        <script src="https://unpkg.com/pdf-lib@1.4.0"></script>
+        <script src="https://unpkg.com/downloadjs@1.4.7"></script>
     </head>
     <body class="root">
-
         <div class="content">
             <h1 class="title">Reuse Cover Letters</h1>
             <div class="instructions">
@@ -23,8 +23,12 @@
                 <div style="width: 20px"></div>
                 <textarea placeholder="Your NEW cover letter!" id="updatedCoverLetter" type="text" class="textArea"></textarea>
             </div>
-            <button class="button" onclick="fillInCompany()" type="submit">Work Magic!</button>
-            <button class="button" onclick="writePDF(document.getElementById(`updatedCoverLetter`).value)" type="submit">WRITE PDF</button>
+            <div class="buttonContainer">
+                <button class="button" onclick="fillInCompany()" type="submit">Work Magic!</button>
+                <div class="buttonSubContainer">
+                    <button class="controlButton" onclick="writePDF(document.getElementById(`updatedCoverLetter`).value)" type="submit">Download</button>
+                </div>
+            </div>
         </div>
     </body>
 </html>
