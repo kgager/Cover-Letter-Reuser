@@ -2,13 +2,27 @@ function fillInCompany() {
     const coverLetter = document.getElementById("coverLetter").value;
     const companyName = document.getElementById("companyName").value;
     const jobTitle = document.getElementById("jobTitle").value;
-    const updatedCoverLetter = coverLetter
-       if(jobTitle.charAt(0).isVowel())
-       {
-         .replaceAll(' a JOB_TITLE', ' an ' + jobTitle);
-       }
+    // const updatedCoverLetter = coverLetter
+    //    if(jobTitle.charAt(0).isVowel())
+    //    {
+    //      .replaceAll(' a JOB_TITLE', ' an ' + jobTitle);
+    //    }
+    //     .replaceAll('COMPANY_NAME', companyName)
+    //     .replaceAll('JOB_TITLE', jobTitle);
+
+
+    const updatedCoverLetter = isVowel(jobTitle.charAt(0)) ?
+        coverLetter
+        .replaceAll(' a JOB_TITLE', ' an ' + jobTitle)
         .replaceAll('COMPANY_NAME', companyName)
-        .replaceAll('JOB_TITLE', jobTitle);
+        .replaceAll('JOB_TITLE', jobTitle)
+        :
+        coverLetter
+        .replaceAll('COMPANY_NAME', companyName)
+        .replaceAll('JOB_TITLE', jobTitle)
+
+
+
     document.getElementById("updatedCoverLetter").value = updatedCoverLetter
 }
 
