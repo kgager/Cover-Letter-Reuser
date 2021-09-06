@@ -3,8 +3,8 @@ function fillInCompany() {
     const companyName = document.getElementById("companyName").value;
     const jobTitle = document.getElementById("jobTitle").value;
     const updatedCoverLetter = coverLetter
-        .replaceAll('🏢', companyName)
-        .replaceAll('💼', jobTitle);
+        .replaceAll('COMPANY_NAME', companyName)
+        .replaceAll('JOB_TITLE', jobTitle);
     document.getElementById("updatedCoverLetter").value = updatedCoverLetter
 }
 
@@ -33,4 +33,3 @@ async function writePDF(letter) {
         download(pdfBytes, "CoverLetter.pdf", "application/pdf");
     }
 }
-
