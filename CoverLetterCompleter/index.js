@@ -3,9 +3,21 @@ function fillInCompany() {
     const companyName = document.getElementById("companyName").value;
     const jobTitle = document.getElementById("jobTitle").value;
     const updatedCoverLetter = coverLetter
+       if(jobTitle.charAt(0).isVowel())
+       {
+         .replaceAll(' a JOB_TITLE', ' an ' + jobTitle);
+       }
         .replaceAll('COMPANY_NAME', companyName)
         .replaceAll('JOB_TITLE', jobTitle);
     document.getElementById("updatedCoverLetter").value = updatedCoverLetter
+}
+
+function isVowel(x) {
+
+    var result;
+
+    result = x == "A" || x == "E" || x == "I" || x == "O" || x == "U";
+    return result;
 }
 
 async function writePDF(letter) {
